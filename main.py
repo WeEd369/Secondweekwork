@@ -13,16 +13,18 @@ except FileNotFoundError:
     ]  # 初始化空数据结构
 
 def list_show():
-    print("欢迎使用志愿者时长管理系统")
-    print("-------------------------")
-    print("1. 显示所有志愿者信息")
-    print("2. 查询指定志愿者时长")
-    print("3. 添加新的志愿者信息")
-    print("4. 统计人均志愿时长")
-    print("5. 退出系统")
-    print("6. 获取每日一句")
-    print("-------------------------")
-    print("请输入您的选择 (1-6):")
+    print("""
+    欢迎使用志愿者时长管理系统
+    -------------------------
+    1. 显示所有志愿者信息
+    2. 查询指定志愿者时长
+    3. 添加新的志愿者信息
+    4. 统计人均志愿时长
+    5. 退出系统
+    6. 获取每日一句
+    -------------------------
+    请输入您的选择 (1-6):
+    """)
 
 def show_all():
     print(f"\n以下是所有志愿者信息:")
@@ -112,7 +114,8 @@ def main():
             input("\n按Enter键继续...")
         except:
             input("\n按Enter键继续...")
-main()
+if __name__ == "__main__":
+    main()
 try:
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(volunteers, f, ensure_ascii=False, indent=4)  # 转换为 JSON 格式并写入文件
