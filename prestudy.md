@@ -51,7 +51,7 @@ import json
 # 从 JSON 文件中读取数据（程序下次运行时）
 try:
     with open("user_data.json", "r", encoding="utf-8") as f:
-        loaded_data = json.load(f)  <!-- 转换为 Python 字典 -->
+        loaded_data = json.load(f)  <!-- 转换为什么类型取决于后文给变量loaded_data的定义 -->
 
    # 复用读取到的数据
     print(f"加载的用户信息：{loaded_data['name']}，年龄 {loaded_data['age']}")
